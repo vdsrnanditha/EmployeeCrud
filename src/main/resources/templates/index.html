@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+	<script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+</head>
+<body>
+<div>
+	<h2 >Spring Boot Crud System -Student Registation</h2>
+	<table>
+	<tr>
+		<div align = "left" >		   
+		     <h3><a  th:href="@{'/new'}">Add new</a></h3>     
+	    </div>
+	    </tr>
+	<tr>
+	
+	<div class="col-sm-5" align = "center">
+                 <div class="panel-body" align = "center" >
+                 <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      		<th>Student ID</th>
+            <th>Student Name</th>
+            <th>Course</th>
+            <th>Fee</th>
+            <th>Edit</th>
+            <th>Delete</th>
+   	</tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td>heeloo</td>
+  <td>hello</td>
+  <td>heeloo</td>
+  <td>hello</td>
+  <td>heeloo</td>
+  <td>hello</td>
+  </tr>
+  
+      <tr  th:each="employee : ${employees}">
+		<td th:text="${employee.id}"></td>
+		<td th:text="${employee.course}"></td>
+		<td th:text="${employee.fee}"></td>
+		<td th:text="${employee.studentname}"></td>				
+		<td>
+			<a th:href="@{'/edit/' + ${employee.id}}">Edit</a>
+		</td>							    
+		<td>
+			<a th:href="@{'/delete/' + ${employee.id}}">Delete</a>
+		</td>		    
+		</tr> 
+   
+  </tbody>
+</table>
+                    
+</div>
+
+  </div> 
+
+	</tr>
+
+	</tbody>
+	</table>
+	<div>
+</body>
+</html>
