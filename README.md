@@ -3,7 +3,7 @@ This project is a sample REST API built with Spring Boot, Hibernate, and MySQL d
 
 # Getting Started
 
-Clone the repository: git clone https://github.com/example/student-api.git
+Clone the repository: git clone https://github.com/vdsrnanditha/EmployeeCrud.git
 
 Navigate to the project directory
 
